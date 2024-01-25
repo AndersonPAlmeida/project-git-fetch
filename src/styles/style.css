@@ -2,6 +2,17 @@ body {
   background-color: var(--gray-900);
 }
 
+header {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+}
+header span {
+  font-size: 5rem;
+  color: var(--gray-100);
+  
+}
+
 main {
   width: 100%;
   max-width: 600px;
@@ -32,7 +43,7 @@ main form {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 form input {
@@ -82,7 +93,7 @@ form button:hover {
 }
 
 .userProfile .profileInformarion {
-  height: 10rem;
+  height: 13rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,5 +103,29 @@ form button:hover {
 
 .profileInformarion .name {
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 2.4rem;
+}
+
+.repositories {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--green-500);
+  padding-bottom: 2rem;
+}
+
+.repositories .repositor{
+  border: 1px solid var(--green-500);
+  padding: 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.repositories .repositor:hover{
+  background-color: var(--green-500);
+  color: var(--gray-100);
 }
