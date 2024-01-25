@@ -2,9 +2,13 @@ body {
   background-color: var(--gray-900);
 }
 
-.container {
+main {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
   background-color: var(--gray-800);
   padding: 1.5rem;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,26 +16,30 @@ body {
   gap: 2rem;
 }
 
-.container h1 {
+.container {
+  width: 550px;
+}
+
+main h1 {
   font-size: 3.2rem;
   font-weight: 700;
   line-height: 3.6rem;
   color: var(--gray-100);
 }
 
-.container form {
-  width: 100%;
+main form {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 form input {
-  padding: 1.6rem;
+  flex: 1;
+  padding: 1.4rem;
   background-color: var(--gray-500);
   border: 1px solid var(--gray-700);
-  width: 50%;
   border-radius: 8px;
   color: var(--gray-100);
 }
@@ -42,8 +50,8 @@ form input::placeholder {
 
 form button {
   background-color: var(--green-500);
-  padding: 1.6rem;
-  border: 1px solid var(--green-300);
+  padding: 1.4rem;
+  border: 1px solid var(--gray-500);
   border-radius: 8px;
   font-weight: 700;
   color: var(--gray-100);
@@ -53,4 +61,36 @@ form button {
 
 form button:hover {
   background-color: var(--green-300);
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.userProfile figure {
+  background-color: var(--green-300);
+  padding: 1rem;
+  width: 22rem;
+  border-radius: 50%;
+}
+
+.userProfile figure img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.userProfile .profileInformarion {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--gray-100);
+}
+
+.profileInformarion .name {
+  font-weight: 700;
+  font-size: 1.6rem;
 }
