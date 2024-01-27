@@ -119,6 +119,7 @@ form button:hover {
   gap: 2rem;
   padding-bottom: 2rem;
 }
+
 .repositories .list{
   display: flex;
   gap: 2rem;
