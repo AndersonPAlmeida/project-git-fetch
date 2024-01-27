@@ -47,7 +47,7 @@ main h1 {
   color: var(--gray-100);
 }
 
-main form {
+main .form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,7 +55,7 @@ main form {
   margin-bottom: 2rem;
 }
 
-form input {
+.form input {
   flex: 1;
   padding: 1.4rem;
   background-color: var(--gray-500);
@@ -64,11 +64,11 @@ form input {
   color: var(--gray-100);
 }
 
-form input::placeholder {
+.form input::placeholder {
   color: var(--gray-300)
 }
 
-form button {
+.form button {
   background-color: var(--green-500);
   padding: 1.4rem;
   border: 1px solid var(--gray-500);
@@ -79,7 +79,7 @@ form button {
   transition: background-color 0.3s;
 }
 
-form button:hover {
+.form button:hover {
   background-color: var(--green-300);
 }
 
