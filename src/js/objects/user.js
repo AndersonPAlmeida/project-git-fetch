@@ -7,6 +7,7 @@ export const user = {
   followers: 0,
   following: 0,
   repositories: [],
+  events: [],
   setMessage(message) {
     this.message = message;
   },
@@ -20,5 +21,8 @@ export const user = {
   },
   setRepositories(gitRepositories) {
     this.repositories = gitRepositories
-  }
+  },
+  setEvents(gitEvents) {
+    this.events = gitEvents
+  },
 }

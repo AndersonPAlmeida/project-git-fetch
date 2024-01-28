@@ -133,23 +133,26 @@ main .form {
   justify-content: space-between;
 }
 
-.repositories {
+.repositories, .events {
   color: var(--gray-100);
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  /* padding-bottom: 2rem; */
 }
 
-.repositories .list{
+.listEvents .event {
+  margin-bottom: 1.5rem;
+}
+
+.repositories .listRepositories{
   display: flex;
   gap: 2rem;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.list .repositor{
+.listRepositories .repositor{
   border: 1px solid var(--green-500);
   padding: 1.4rem;
   border-radius: 8px;

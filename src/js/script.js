@@ -1,5 +1,6 @@
 import { getRepositoriesServices } from "./services/repositories.js"
 import { getUserServices } from './services/user.js'
+import { getEventServices } from './services/events.js'
 import { user } from './objects/user.js'
 import { renderUser } from "./screen/userScreen.js"
 import { renderRepositories } from "./screen/repositoriesScreen.js"
@@ -20,6 +21,7 @@ buttonSearch.addEventListener('click', () => {
 async function getUserData(queryName) {
   const userResponse = await getUserServices(queryName)
   const userRepositories = await getRepositoriesServices(queryName)
+  const eventsReponse = await getEventServices(queryName)
 
   console.log(userResponse);
   if(userResponse.message === 'Not Found') {
@@ -27,9 +29,11 @@ async function getUserData(queryName) {
   } else {
     user.setInfo(userResponse)
     user.setRepositories(userRepositories)
+    user.setEvents(eventsReponse)
     user.setMessage('')
-    
   }
   renderRepositories(user)
   renderUser(user)
 }
+
+getEventServices('diego3g')

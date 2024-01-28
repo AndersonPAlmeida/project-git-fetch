@@ -1,5 +1,5 @@
 const containerRepositories = document.querySelector('.repositories')
-const listRepositories = document.querySelector('.list')
+const listRepositories = document.querySelector('.listRepositories')
 
 export function renderRepositories(user) {
   let repositoriesList = ''
