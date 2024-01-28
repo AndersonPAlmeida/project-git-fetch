@@ -97,7 +97,7 @@ main .form {
 }
 
 .userProfile figure {
-  width: 22rem;
+  width: 18rem;
   padding: 0.5rem;
   border-radius: 50%;
   display: flex;
@@ -112,11 +112,11 @@ main .form {
 }
 
 .userProfile .profileInformarion {
-  height: 13rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
   color: var(--gray-100);
   text-align: center;
 }
@@ -124,6 +124,13 @@ main .form {
 .profileInformarion .name {
   font-weight: 700;
   font-size: 2.4rem;
+}
+
+.userProfile .networking {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .repositories {

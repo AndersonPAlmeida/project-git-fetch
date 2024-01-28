@@ -4,6 +4,8 @@ export const user = {
   bio: '',
   userName: '',
   message: '',
+  followers: 0,
+  following: 0,
   repositories: [],
   setMessage(message) {
     this.message = message;
@@ -13,6 +15,8 @@ export const user = {
     this.name = gitHubUser.name
     this.bio = gitHubUser.bio
     this.userName = gitHubUser.login
+    this.followers = gitHubUser.followers,
+    this.following = gitHubUser.following
   },
   setRepositories(gitRepositories) {
     this.repositories = gitRepositories

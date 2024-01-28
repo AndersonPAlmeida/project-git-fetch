@@ -9,6 +9,10 @@ const buttonSearch = document.querySelector('.buttonSearch')
 buttonSearch.addEventListener('click', () => {
   const queryName = document.querySelector('#nameUser').value;
 
+  if (queryName.length === 0) {
+    alert('Preencha o campo com o nome do usário do GitHub.')
+    return
+  }
   getUserData(queryName)
 
 })
@@ -17,7 +21,7 @@ async function getUserData(queryName) {
   const userResponse = await getUserServices(queryName)
   const userRepositories = await getRepositoriesServices(queryName)
 
-  console.log(userRepositories);
+  console.log(userResponse);
   if(userResponse.message === 'Not Found') {
     user.setMessage(userResponse.message)
   } else {
