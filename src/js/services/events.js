@@ -3,7 +3,6 @@ import { base_url } from "./variablesServices.js";
 export async function getEventServices(nameUser) {
   const response = await fetch(`${base_url}/${nameUser}/events?event_type=PullRequestEvent`) 
   const data = await response.json()
-  console.log(data);
 
   if(data.message === 'Not Found') {
     containerEvents.classList.add('hidden')

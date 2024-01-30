@@ -5,6 +5,7 @@ import { user } from './objects/user.js'
 import { renderUser } from "./screen/userScreen.js"
 import { renderRepositories } from "./screen/repositoriesScreen.js"
 import { renderEvent } from "./screen/eventsScreen.js"
+import { renderError } from "./screen/errorScreen.js"
 
 const buttonSearch = document.querySelector('.buttonSearch')
 
@@ -21,20 +22,19 @@ buttonSearch.addEventListener('click', () => {
 
 async function getUserData(queryName) {
   const userResponse = await getUserServices(queryName)
-  const userRepositories = await getRepositoriesServices(queryName)
-  
 
   if(userResponse.message === 'Not Found') {
-    user.setMessage(userResponse.message)
+    renderError()
   } else {
+    const userRepositories = await getRepositoriesServices(queryName)
     const eventsReponse = await getEventServices(queryName)
-
+    console.log(userRepositories);
     user.setInfo(userResponse)
     user.setRepositories(userRepositories)
     user.setEvents(eventsReponse)
-    user.setMessage('')
+    
+    renderUser(user)
+    renderEvent(user)
+    renderRepositories(user)
   }
-  renderUser(user)
-  renderEvent(user)
-  renderRepositories(user)
 }
