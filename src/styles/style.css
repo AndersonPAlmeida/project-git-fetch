@@ -5,8 +5,9 @@ body {
 header {
   width: 100%;
   text-align: center;
-  margin: 2rem 0 4rem;
+  margin: 2rem 0;
 }
+
 header span {
   font-size: 5rem;
   color: var(--gray-100);
@@ -15,9 +16,9 @@ header span {
 main {
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 5rem;
   background-color: var(--gray-800);
-  padding: 1.5rem;
+  padding: 3rem 1.5rem;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -35,11 +36,6 @@ main {
   display: none !important;
 }
 
-main {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
 main h1 {
   font-size: 3.2rem;
   font-weight: 700;
@@ -52,7 +48,6 @@ main .form {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  margin-bottom: 2rem;
 }
 
 .form input {
@@ -93,7 +88,6 @@ main .form {
 .userProfile .errorSearch {
   color: var(--red-500);
   text-transform: uppercase;
-  /* padding-bottom: 2rem; */
 }
 
 .userProfile figure {
@@ -145,32 +139,49 @@ main .form {
   margin-bottom: 1.5rem;
 }
 
-.repositories .listRepositories{
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  flex-wrap: wrap;
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;  
+  border-radius: 10px;
+  border: 1px solid var(--gray-100);
+  overflow: hidden;
 }
 
-.listRepositories .repositor{
-  border: 1px solid var(--green-500);
-  padding: 1.4rem;
-  border-radius: 8px;
-  cursor: pointer;
+th, td {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--gray-100);
 }
 
-.repositor a{
-  font-weight: 700;
-  color: var(--green-500);
+thead tr {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
-.repositories .repositor:hover{
+thead th {
   background-color: var(--green-500);
-  color: var(--gray-100);
-  transition: background-color 0.5s;
 }
 
-.repositor:hover a{
-  color: var(--gray-100);
-  transition: color 0.5s;
+tbody tr:last-child{
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0px solid var(--gray-100);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--gray-900);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--gray-500);
+}
+
+tbody tr:hover {
+  transition: background-color 0.5s, color 0.5s;
+  background-color: var(--gray-100);
+  color: var(--gray-900);
 }
