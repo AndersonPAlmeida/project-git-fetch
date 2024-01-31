@@ -4,14 +4,26 @@ export function renderRepositories(user) {
   let repositoriesList = ''
 
   if(user.repositories.length === 0) {
-    repositoriesList = `<h3>Usuário não tem repositórios no github.</h3>`
+    repositoriesList = `
+                        <tr>
+                          <td colspan="5" style="text-align: center;">Usuário não tem repositórios no github.</td>
+                        </tr>
+                      `
   } 
   
   user.repositories.forEach((repositor) => {
-    repositoriesList += ` <li class="repositor">
+    repositoriesList +=
+                      ` <tr>
+                          <td>
                             <a href="${repositor.html_url}" target="_blank">${repositor.name}</a>
-                          </li>
-                        `
+                          </td>
+                          <td>${repositor.stargazers_count}</td>
+                          <td>${repositor.forks_count}</td>
+                          <td>${repositor.watchers_count}</td>
+                          <td>${repositor.language}</td>
+                        </tr>
+                      `
+
   })
   
   listRepositories.innerHTML = repositoriesList

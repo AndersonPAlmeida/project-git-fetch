@@ -1,0 +1,5 @@
+export const containerUserProfile = document.querySelector('.userProfile')
+export const containerEvents = document.querySelector('.events')
+export const listEvents = document.querySelector('.listEvents')
+export const containerRepositories = document.querySelector('.repositories')
+export const listRepositories = document.querySelector('.tableRepositories')

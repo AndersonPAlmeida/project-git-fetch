@@ -129,7 +129,6 @@ main .form {
 
 .repositories, .events {
   color: var(--gray-100);
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -150,7 +149,7 @@ table {
 }
 
 th, td {
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   border-bottom: 1px solid var(--gray-100);
 }
 
@@ -183,5 +182,15 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   transition: background-color 0.5s, color 0.5s;
   background-color: var(--gray-100);
+  color: var(--gray-900);
+}
+
+tbody td a {
+  color: var(--gray-100);
+  font-weight: 700;
+}
+
+tbody tr:hover a {
+  transition: color 0.5s;
   color: var(--gray-900);
 }
